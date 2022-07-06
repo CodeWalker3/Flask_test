@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>{% block title %} produto {% endblock %}</h1>
+    {% for produto in produto %}
+        <div class='book'>
+            <h3>#{{ produto[0] }} - {{ produto[1] }} BY {{ produto[2] }}</h3>
+            <i><p>({{ produto[3] }} pages)</p></i>
+            <p class='review'>{{ produto[4] }}</p>
+            <i><p>Added {{ produto[5] }}</p></i>
+        </div>
+    {% endfor %}
+{% endblock %}
